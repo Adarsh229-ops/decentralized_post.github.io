@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decentralized Posts</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.ethers.io/lib/ethers-5.7.2.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌐 Decentralized Posts</h1>
+            <div id="wallet-info">
+                <button id="connect-wallet">Connect Wallet</button>
+                <span id="wallet-address"></span>
+            </div>
+        </header>
+
+        <main>
+            <section class="create-post">
+                <h2>Create New Post</h2>
+                <form id="post-form">
+                    <input type="text" id="post-title" placeholder="Post Title" required>
+                    <textarea id="post-content" placeholder="Write your post content..." required></textarea>
+                    <input type="text" id="post-author" placeholder="Your name (optional)">
+                    <button type="submit">Create Post</button>
+                </form>
+                <div id="create-status"></div>
+            </section>
+
+            <section class="posts-section">
+                <h2>All Posts</h2>
+                <button id="refresh-posts">🔄 Refresh Posts</button>
+                <div id="posts-container">
+                    <div class="loading">Loading posts...</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
