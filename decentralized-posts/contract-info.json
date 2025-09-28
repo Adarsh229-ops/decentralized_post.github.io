@@ -1,0 +1,282 @@
+{
+  "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "abi": [
+    {
+      "type": "event",
+      "anonymous": false,
+      "name": "PostCreated",
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "postId",
+          "indexed": true
+        },
+        {
+          "type": "address",
+          "name": "creator",
+          "indexed": true
+        },
+        {
+          "type": "string",
+          "name": "ipfsHash",
+          "indexed": false
+        }
+      ]
+    },
+    {
+      "type": "event",
+      "anonymous": false,
+      "name": "PostVoted",
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "postId",
+          "indexed": true
+        },
+        {
+          "type": "address",
+          "name": "voter",
+          "indexed": true
+        },
+        {
+          "type": "int8",
+          "name": "vote",
+          "indexed": false
+        },
+        {
+          "type": "int256",
+          "name": "newRating",
+          "indexed": false
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "createPost",
+      "constant": false,
+      "payable": false,
+      "inputs": [
+        {
+          "type": "string",
+          "name": "ipfsHash"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "uint256",
+          "name": ""
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "downvotePost",
+      "constant": false,
+      "payable": false,
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "postId"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "getAllPosts",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "tuple[]",
+          "name": "",
+          "components": [
+            {
+              "type": "uint256",
+              "name": "id"
+            },
+            {
+              "type": "address",
+              "name": "creator"
+            },
+            {
+              "type": "string",
+              "name": "ipfsHash"
+            },
+            {
+              "type": "int256",
+              "name": "rating"
+            },
+            {
+              "type": "uint256",
+              "name": "timestamp"
+            },
+            {
+              "type": "bool",
+              "name": "exists"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "getPost",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "postId"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "tuple",
+          "name": "",
+          "components": [
+            {
+              "type": "uint256",
+              "name": "id"
+            },
+            {
+              "type": "address",
+              "name": "creator"
+            },
+            {
+              "type": "string",
+              "name": "ipfsHash"
+            },
+            {
+              "type": "int256",
+              "name": "rating"
+            },
+            {
+              "type": "uint256",
+              "name": "timestamp"
+            },
+            {
+              "type": "bool",
+              "name": "exists"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "getUserVote",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "postId"
+        },
+        {
+          "type": "address",
+          "name": "user"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "int8",
+          "name": ""
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "nextPostId",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "uint256",
+          "name": ""
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "posts",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": ""
+        }
+      ],
+      "outputs": [
+        {
+          "type": "uint256",
+          "name": "id"
+        },
+        {
+          "type": "address",
+          "name": "creator"
+        },
+        {
+          "type": "string",
+          "name": "ipfsHash"
+        },
+        {
+          "type": "int256",
+          "name": "rating"
+        },
+        {
+          "type": "uint256",
+          "name": "timestamp"
+        },
+        {
+          "type": "bool",
+          "name": "exists"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "upvotePost",
+      "constant": false,
+      "payable": false,
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "postId"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "userVotes",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": ""
+        },
+        {
+          "type": "address",
+          "name": ""
+        }
+      ],
+      "outputs": [
+        {
+          "type": "int8",
+          "name": ""
+        }
+      ]
+    }
+  ]
+}

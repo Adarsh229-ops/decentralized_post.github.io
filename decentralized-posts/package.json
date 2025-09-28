@@ -1,0 +1,21 @@
+{
+  "name": "decentralized-posts",
+  "version": "1.0.0",
+  "description": "Decentralized posting and rating system",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "deploy": "npx hardhat run contracts/deploy.js --network localhost",
+    "node": "npx hardhat node",
+    "setup": "npm install && cd backend && npm install && cd ../frontend && npm install && cd ..",
+    "start-backend": "cd backend && npm start",
+    "start-frontend": "cd frontend && npm start"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "hardhat": "^2.26.3"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.3"
+  }
+}
